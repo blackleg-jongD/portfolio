@@ -1,0 +1,258 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Portfolio Data Schema",
+  "description": "JSON Schema for portfolio website data files",
+  "definitions": {
+    "personalInfo": {
+      "type": "object",
+      "required": ["name", "title", "bio"],
+      "properties": {
+        "name": {
+          "type": "string",
+          "minLength": 1,
+          "description": "지원자 이름"
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "description": "직무/직책"
+        },
+        "bio": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200,
+          "description": "짧은 소개 (최대 200자)"
+        },
+        "location": {
+          "type": "string",
+          "description": "위치"
+        },
+        "avatar": {
+          "type": "string",
+          "format": "uri",
+          "description": "프로필 이미지 경로"
+        },
+        "resume": {
+          "type": "string",
+          "format": "uri",
+          "description": "이력서 PDF 링크"
+        }
+      }
+    },
+    "project": {
+      "type": "object",
+      "required": ["id", "title", "description", "technologies", "thumbnail"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9-]+$",
+          "description": "고유 식별자 (URL-safe)"
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "description": "프로젝트 제목"
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 500,
+          "description": "프로젝트 설명 (최대 500자)"
+        },
+        "longDescription": {
+          "type": "string",
+          "description": "상세 설명"
+        },
+        "technologies": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string"
+          },
+          "description": "사용 기술 스택 배열"
+        },
+        "category": {
+          "type": "string",
+          "enum": ["Web", "Mobile", "AI", "Desktop", "Other"],
+          "description": "프로젝트 카테고리"
+        },
+        "featured": {
+          "type": "boolean",
+          "default": false,
+          "description": "주요 프로젝트 여부"
+        },
+        "startDate": {
+          "type": "string",
+          "format": "date",
+          "description": "시작 날짜 (ISO 8601)"
+        },
+        "endDate": {
+          "type": ["string", "null"],
+          "format": "date",
+          "description": "종료 날짜 (ISO 8601, null이면 진행 중)"
+        },
+        "role": {
+          "type": "string",
+          "description": "역할/책임"
+        },
+        "teamSize": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "팀 크기"
+        },
+        "thumbnail": {
+          "type": "string",
+          "format": "uri",
+          "description": "썸네일 이미지 경로"
+        },
+        "images": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "format": "uri"
+          },
+          "description": "프로젝트 이미지 배열"
+        },
+        "demoUrl": {
+          "type": "string",
+          "format": "uri",
+          "description": "데모 링크"
+        },
+        "githubUrl": {
+          "type": "string",
+          "format": "uri",
+          "description": "GitHub 리포지토리 링크"
+        },
+        "externalUrl": {
+          "type": "string",
+          "format": "uri",
+          "description": "기타 외부 링크"
+        },
+        "achievements": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "주요 성과/결과 배열"
+        }
+      }
+    },
+    "skill": {
+      "type": "object",
+      "required": ["id", "name", "category"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9-]+$",
+          "description": "고유 식별자 (URL-safe)"
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1,
+          "description": "기술명"
+        },
+        "category": {
+          "type": "string",
+          "enum": ["language", "framework", "tool", "platform", "other"],
+          "description": "카테고리"
+        },
+        "level": {
+          "type": "string",
+          "enum": ["beginner", "intermediate", "advanced", "expert"],
+          "description": "숙련도 레벨"
+        },
+        "yearsOfExperience": {
+          "type": "number",
+          "minimum": 0,
+          "description": "경력 년수"
+        },
+        "icon": {
+          "type": "string",
+          "description": "아이콘 경로 또는 CSS 클래스명"
+        },
+        "color": {
+          "type": "string",
+          "pattern": "^#[0-9A-Fa-f]{6}$",
+          "description": "브랜드 컬러 (hex 코드)"
+        },
+        "description": {
+          "type": "string",
+          "description": "기술 설명"
+        }
+      }
+    },
+    "contactInfo": {
+      "type": "object",
+      "required": ["email"],
+      "properties": {
+        "email": {
+          "type": "string",
+          "format": "email",
+          "description": "이메일 주소"
+        },
+        "phone": {
+          "type": "string",
+          "description": "전화번호"
+        },
+        "location": {
+          "type": "string",
+          "description": "위치"
+        },
+        "socialLinks": {
+          "type": "object",
+          "properties": {
+            "github": {
+              "type": "string",
+              "format": "uri"
+            },
+            "linkedin": {
+              "type": "string",
+              "format": "uri"
+            },
+            "twitter": {
+              "type": "string",
+              "format": "uri"
+            },
+            "blog": {
+              "type": "string",
+              "format": "uri"
+            },
+            "website": {
+              "type": "string",
+              "format": "uri"
+            }
+          }
+        },
+        "availability": {
+          "type": "string",
+          "enum": ["available", "busy", "not-looking"],
+          "description": "구직 상태"
+        }
+      }
+    }
+  },
+  "oneOf": [
+    {
+      "title": "Personal Info",
+      "$ref": "#/definitions/personalInfo"
+    },
+    {
+      "title": "Projects Array",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/project"
+      }
+    },
+    {
+      "title": "Skills Array",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/skill"
+      }
+    },
+    {
+      "title": "Contact Info",
+      "$ref": "#/definitions/contactInfo"
+    }
+  ]
+}

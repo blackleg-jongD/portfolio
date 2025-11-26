@@ -1,0 +1,18 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: rgba(10, 14, 39, 0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  transition: all var(--transition-base);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.header.scrolled {
+  box-shadow: 
+    0 2px 10px rgba(0, 0, 0, 0.5),
+    0 0 20px rgba(0, 217, 255, 0.2);
+}

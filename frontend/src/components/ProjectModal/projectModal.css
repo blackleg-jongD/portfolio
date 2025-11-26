@@ -1,0 +1,288 @@
+.project-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity var(--transition-base), visibility var(--transition-base);
+}
+
+.project-modal.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.project-modal.closing {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.modal-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(5, 8, 19, 0.95);
+  backdrop-filter: blur(8px);
+}
+
+.modal-content {
+  position: relative;
+  background-color: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-lg);
+  max-width: 900px;
+  max-height: 90vh;
+  width: 90%;
+  margin: var(--spacing-md);
+  overflow-y: auto;
+  box-shadow: var(--shadow-glow);
+  transform: scale(0.9);
+  transition: transform var(--transition-base);
+  z-index: 2001;
+}
+
+.project-modal.open .modal-content {
+  transform: scale(1);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-lg);
+  border-bottom: 1px solid var(--color-border);
+  position: sticky;
+  top: 0;
+  background-color: var(--color-bg-card);
+  z-index: 10;
+  background: linear-gradient(180deg, var(--color-bg-card) 0%, rgba(26, 31, 58, 0.95) 100%);
+}
+
+.modal-title {
+  margin: 0;
+  font-size: var(--font-size-xxl);
+  color: var(--color-primary-light);
+  font-weight: 700;
+}
+
+.modal-close {
+  background: none;
+  border: 1px solid var(--color-border);
+  font-size: 1.5rem;
+  color: var(--color-text);
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--border-radius);
+  transition: all var(--transition-fast);
+  line-height: 1;
+}
+
+.modal-close:hover {
+  background-color: var(--color-danger);
+  border-color: var(--color-danger);
+  color: var(--color-bg-dark);
+  box-shadow: 0 0 15px rgba(255, 51, 102, 0.5);
+}
+
+.modal-close:focus {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+  box-shadow: 0 0 10px var(--color-primary-glow);
+}
+
+.modal-body {
+  padding: var(--spacing-lg);
+}
+
+.project-images {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+}
+
+.project-images img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--color-border);
+}
+
+.project-main-image {
+  width: 100%;
+  height: auto;
+  border-radius: var(--border-radius);
+  margin-bottom: var(--spacing-lg);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--color-border);
+}
+
+.project-description {
+  margin-bottom: var(--spacing-lg);
+  line-height: var(--line-height-base);
+  color: var(--color-text-light);
+  font-size: var(--font-size-base);
+}
+
+.project-description p {
+  margin-bottom: var(--spacing-md);
+}
+
+.project-details {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+}
+
+.detail-section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--spacing-sm);
+  color: var(--color-text-light);
+  padding: var(--spacing-sm);
+  background-color: var(--color-bg-dark);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--color-border);
+}
+
+.detail-section strong {
+  color: var(--color-primary-light);
+  margin-right: var(--spacing-xs);
+}
+
+.detail-section ul {
+  list-style: none;
+  margin-left: 0;
+  margin-top: var(--spacing-xs);
+}
+
+.detail-section li {
+  margin-bottom: var(--spacing-xs);
+  padding-left: var(--spacing-md);
+  position: relative;
+}
+
+.detail-section li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: var(--color-primary);
+}
+
+.modal-footer {
+  padding: var(--spacing-lg);
+  border-top: 1px solid var(--color-border);
+  position: sticky;
+  bottom: 0;
+  background-color: var(--color-bg-card);
+  background: linear-gradient(0deg, var(--color-bg-card) 0%, rgba(26, 31, 58, 0.95) 100%);
+}
+
+.project-links {
+  display: flex;
+  gap: var(--spacing-md);
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.project-link-button {
+  padding: var(--spacing-md) var(--spacing-lg);
+  border-radius: var(--border-radius);
+  text-decoration: none;
+  font-weight: 600;
+  transition: all var(--transition-fast);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  font-family: var(--font-family-base);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  border: 1px solid;
+}
+
+.project-link-button.demo {
+  background-color: var(--color-primary);
+  color: var(--color-bg-dark);
+  border-color: var(--color-primary);
+}
+
+.project-link-button.demo:hover {
+  background-color: var(--color-primary-light);
+  color: var(--color-bg-dark);
+  text-decoration: none;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-glow);
+}
+
+.project-link-button.github {
+  background-color: var(--color-bg-dark);
+  color: var(--color-text);
+  border-color: var(--color-border);
+}
+
+.project-link-button.github:hover {
+  background-color: var(--color-primary);
+  color: var(--color-bg-dark);
+  border-color: var(--color-primary);
+  text-decoration: none;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-glow);
+}
+
+.project-link-button.external {
+  background-color: transparent;
+  color: var(--color-secondary);
+  border-color: var(--color-secondary);
+}
+
+.project-link-button.external:hover {
+  background-color: var(--color-secondary);
+  color: var(--color-bg-dark);
+  border-color: var(--color-secondary);
+  text-decoration: none;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-glow-orange);
+}
+
+.project-link-button:focus {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+  box-shadow: 0 0 10px var(--color-primary-glow);
+}
+
+@media (max-width: 768px) {
+  .modal-content {
+    width: 95%;
+    max-height: 95vh;
+    margin: var(--spacing-sm);
+  }
+
+  .modal-header,
+  .modal-body,
+  .modal-footer {
+    padding: var(--spacing-md);
+  }
+
+  .modal-title {
+    font-size: var(--font-size-xl);
+  }
+
+  .project-images {
+    grid-template-columns: 1fr;
+  }
+}

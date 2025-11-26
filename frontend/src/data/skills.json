@@ -1,0 +1,119 @@
+[
+  {
+    "id": "c",
+    "name": "C",
+    "category": "language",
+    "level": "advanced",
+    "yearsOfExperience": 4,
+    "color": "#A8B9CC",
+    "description": "시스템 프로그래밍 및 임베디드 개발"
+  },
+  {
+    "id": "cpp",
+    "name": "C++",
+    "category": "language",
+    "level": "advanced",
+    "yearsOfExperience": 4,
+    "color": "#00599C",
+    "description": "객체지향 설계 및 성능 최적화"
+  },
+  {
+    "id": "python",
+    "name": "Python",
+    "category": "language",
+    "level": "intermediate",
+    "yearsOfExperience": 5,
+    "color": "#3776AB",
+    "description": "머신러닝 및 로봇 제어 스크립팅"
+  },
+  {
+    "id": "ros",
+    "name": "ROS/ROS2",
+    "category": "framework",
+    "level": "advanced",
+    "yearsOfExperience": 1,
+    "color": "#22314E",
+    "description": "로봇 운영 체제 및 분산 시스템"
+  },
+  {
+    "id": "linux",
+    "name": "Linux",
+    "category": "platform",
+    "level": "advanced",
+    "yearsOfExperience": 1,
+    "color": "#FCC624",
+    "description": "임베디드 Linux 및 시스템 프로그래밍"
+  },
+  {
+    "id": "arduino",
+    "name": "Arduino",
+    "category": "platform",
+    "level": "advanced",
+    "yearsOfExperience": 3,
+    "color": "#00979D",
+    "description": "마이크로컨트롤러 개발 및 프로토타이핑"
+  },
+  {
+    "id": "raspberry-pi",
+    "name": "Raspberry Pi",
+    "category": "platform",
+    "level": "advanced",
+    "yearsOfExperience": 3,
+    "color": "#C51A4A",
+    "description": "단일 보드 컴퓨터 및 임베디드 시스템"
+  },
+  {
+    "id": "esp32",
+    "name": "ESP32",
+    "category": "platform",
+    "level": "intermediate",
+    "yearsOfExperience": 2,
+    "color": "#E7352C",
+    "description": "IoT 개발 및 WiFi/Bluetooth 통신"
+  },
+  {
+    "id": "opencv",
+    "name": "OpenCV",
+    "category": "tool",
+    "level": "intermediate",
+    "yearsOfExperience": 1,
+    "color": "#5C3EE8",
+    "description": "컴퓨터 비전 및 이미지 처리"
+  },
+  {
+    "id": "git",
+    "name": "Git",
+    "category": "tool",
+    "level": "advanced",
+    "yearsOfExperience": 5,
+    "color": "#F05032",
+    "description": "버전 관리 및 협업"
+  },
+  {
+    "id": "gazebo",
+    "name": "Gazebo",
+    "category": "tool",
+    "level": "intermediate",
+    "yearsOfExperience": 2,
+    "color": "#1A1A1A",
+    "description": "로봇 시뮬레이션 환경"
+  },
+  {
+    "id": "tensorflow",
+    "name": "TensorFlow",
+    "category": "framework",
+    "level": "intermediate",
+    "yearsOfExperience": 2,
+    "color": "#FF6F00",
+    "description": "머신러닝 모델 개발 및 배포"
+  },
+  {
+    "id": "yocto",
+    "name": "Yocto Project",
+    "category": "tool",
+    "level": "intermediate",
+    "yearsOfExperience": 2,
+    "color": "#0B8C3C",
+    "description": "임베디드 Linux 빌드 시스템"
+  }
+]
