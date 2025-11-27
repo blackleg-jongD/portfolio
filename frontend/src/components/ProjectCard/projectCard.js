@@ -4,6 +4,7 @@
  */
 
 import { generateProjectPlaceholder } from '../../utils/imagePlaceholder.js';
+import { resolveAssetPath } from '../../utils/pathHelper.js';
 
 /**
  * Create a project card element
@@ -22,7 +23,7 @@ export function createProjectCard(project) {
   
   // Use placeholder if thumbnail doesn't exist or fails to load
   const placeholder = generateProjectPlaceholder(project.title, project.id, 400, 300);
-  thumbnail.src = project.thumbnail || placeholder;
+  thumbnail.src = project.thumbnail ? resolveAssetPath(project.thumbnail) : placeholder;
   thumbnail.alt = `${project.title} 썸네일`;
   thumbnail.loading = 'lazy';
   thumbnail.onerror = function () {

@@ -3,6 +3,8 @@
  * Displays personal information and introduction
  */
 
+import { resolveAssetPath } from '../../utils/pathHelper.js';
+
 /**
  * Create Hero section
  * @param {Object} personalInfo - Personal information object
@@ -47,7 +49,7 @@ export function createHero(personalInfo) {
     const avatarContainer = document.createElement('div');
     avatarContainer.className = 'hero-avatar-container';
     const avatar = document.createElement('img');
-    avatar.src = personalInfo.avatar;
+    avatar.src = resolveAssetPath(personalInfo.avatar);
     avatar.alt = `${personalInfo.name || 'Portfolio'} 프로필 이미지`;
     avatar.className = 'hero-avatar';
     avatar.loading = 'eager';

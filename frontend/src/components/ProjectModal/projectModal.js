@@ -4,6 +4,7 @@
  */
 
 import { generateProjectPlaceholder } from '../../utils/imagePlaceholder.js';
+import { resolveAssetPath } from '../../utils/pathHelper.js';
 
 /**
  * Create project modal
@@ -52,7 +53,7 @@ export function createProjectModal(project) {
     imageGallery.className = 'project-images';
     project.images.forEach((imageUrl) => {
       const img = document.createElement('img');
-      img.src = imageUrl;
+      img.src = resolveAssetPath(imageUrl);
       img.alt = `${project.title} 이미지`;
       img.loading = 'lazy';
       img.onerror = function () {
@@ -64,7 +65,7 @@ export function createProjectModal(project) {
     body.appendChild(imageGallery);
   } else if (project.thumbnail) {
     const thumbnail = document.createElement('img');
-    thumbnail.src = project.thumbnail;
+    thumbnail.src = resolveAssetPath(project.thumbnail);
     thumbnail.alt = `${project.title} 썸네일`;
     thumbnail.className = 'project-main-image';
     thumbnail.onerror = function () {
