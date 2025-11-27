@@ -1,5 +1,83 @@
 [
   {
+    "id": "smart-classification-robot",
+    "title": "스마트 분류 로봇 제어 시스템 개발",
+    "description": "컨베이어 벨트와 카메라, 로봇팔을 활용해 공정 내 물체 인식과 자동 분류를 구현한 지능형 팩토리 자동화 시스템 개발 프로젝트.",
+    "longDescription": "컨베이어 벨트와 카메라, 로봇팔을 활용해 공정 내 물체 인식과 자동 분류를 구현한 지능형 팩토리 자동화 시스템 개발 프로젝트입니다. Vision(RealSense+YOLOv5), ROS2 제어, Backend, Web UI로 구성된 통합 파이프라인을 설계 및 구현했습니다. 카메라와 AI 모델 연계로 공정 내 패널 및 상태 식별, 자동 분류 및 위치 정렬 기능을 구현했으며, Dobot 로봇팔 동작제어 모듈 및 TCP/IP, ROS2 Service, Action을 적용했습니다. FastAPI 기반의 REST API와 React를 활용한 실시간 모니터링 대시보드를 구축하여 통합 흐름 시뮬레이션 및 예외상황(미분류 등) 처리 로직을 적용했습니다.",
+    "technologies": ["Python", "ROS2", "YOLOv5", "OpenCV", "FastAPI", "React", "Dobot Magician", "Computer Vision", "IoT"],
+    "category": "Other",
+    "featured": true,
+    "startDate": "2024-01-01",
+    "endDate": "2024-08-31",
+    "role": "Embedded & Robotics Developer",
+    "teamSize": 4,
+    "thumbnail": "/assets/projects/smart-classification-robot-thumb.jpg",
+    "images": [
+      "/assets/projects/smart-classification-robot-1.jpg",
+      "/assets/projects/smart-classification-robot-2.jpg"
+    ],
+    "demoUrl": "https://www.canva.com/design/DAGoml5r5c4/5OITlzPANou5it4Lv2NqwA/view?utm_content=DAGoml5r5c4&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h514f26c98a",
+    "githubUrl": "https://github.com/kmk4729/ssafy-13th-emb",
+    "achievements": [
+      "Vision(RealSense+YOLOv5), ROS2 제어, Backend, Web UI 통합 파이프라인 설계 및 구현",
+      "카메라-AI 모델 연계로 공정 내 패널 및 상태 식별, 자동 분류 및 위치 정렬 기능 구현",
+      "Dobot 로봇팔 동작제어 모듈 및 TCP/IP, ROS2 Service, Action 적용",
+      "FastAPI 기반 REST API와 React 실시간 모니터링 대시보드 구축",
+      "통합 흐름 시뮬레이션 및 예외상황(미분류 등) 처리 로직 적용"
+    ]
+  },
+  {
+    "id": "pressure-sensor-design",
+    "title": "전기차용 40bar 절대압 센서 설계",
+    "description": "자동차용 압력 센서를 위한 레이아웃 설계 및 공정 연계 실무형 산학 협력프로젝트입니다. L-Edit을 사용하여 반도체 물리 레이아웃 설계를 수행했습니다.",
+    "longDescription": "자동차용 압력 센서를 위한 레이아웃 설계 및 공정 연계 실무형 산학 협력프로젝트입니다. L-Edit을 사용하여 반도체 물리 레이아웃 설계를 수행했으며, 레이아웃 제약 조건 기반의 설계 방식을 학습했습니다. 센서 동작 원리 분석 및 설계 검증 과정에 참여했고, 실제 양산 공정을 고려한 설계 변경 및 조정 경험을 쌓았습니다. 마스크 설계와 반도체 공정 이해를 바탕으로 산업 현장에서 요구되는 실무 역량을 습득했습니다.",
+    "technologies": ["L-Edit", "압력 센서 레이아웃 설계", "마스크 설계", "반도체 공정"],
+    "category": "Other",
+    "featured": true,
+    "startDate": "2024-03-01",
+    "endDate": "2024-06-30",
+    "role": "Semiconductor Design Engineer",
+    "teamSize": 3,
+    "thumbnail": "/assets/projects/pressure-sensor-thumb.jpg",
+    "images": [
+      "/assets/projects/pressure-sensor-1.jpg"
+    ],
+    "demoUrl": null,
+    "githubUrl": null,
+    "achievements": [
+      "레이아웃 제약 조건 기반의 설계 방식 학습",
+      "센서 동작 원리 분석 및 설계 검증 과정 참여",
+      "실제 양산 공정을 고려한 설계 변경 및 조정 경험",
+      "마스크 설계 및 반도체 공정 이해를 통한 실무 역량 습득"
+    ]
+  },
+  {
+    "id": "multi-sensor-action-analysis",
+    "title": "다중 센서 신호 기반 동작 분석 및 판별",
+    "description": "가속도, 자이로, 자기, 중력 등 다양한 센서 데이터를 수집하여 Matlab 환경에서 신호 전처리, 피크 분석, 동작 방향 인식 로직을 구현한 프로젝트입니다.",
+    "longDescription": "가속도, 자이로, 자기, 중력 등 다양한 센서 데이터를 수집하여 Matlab 환경에서 신호 전처리, 피크 분석, 동작 방향 인식 로직까지 직접 구현했습니다. 실시간 데이터의 통계적·물리적 특징을 기반으로 움직임 패턴을 분석하고, 알고리즘 성능 개선을 위해 반복 실험과 코드 최적화를 진행했습니다. 센서 데이터 획득 및 Matlab 프로그래밍을 통해 신호 피크 검출 및 분류 로직을 구현했으며, 실제 스마트 디바이스를 여러 방향·상황에서 동작시켰을 때 원하는 방향 판별이 안정적으로 이루어졌습니다. 데이터 기반 동작 분류와 신호 해석 역량을 크게 향상시켰습니다.",
+    "technologies": ["Matlab", "신호 처리", "센서 데이터 분석", "피크 검출", "패턴 인식"],
+    "category": "Other",
+    "featured": false,
+    "startDate": "2023-09-01",
+    "endDate": "2023-12-31",
+    "role": "Signal Processing Engineer",
+    "teamSize": 1,
+    "thumbnail": "/assets/projects/multi-sensor-thumb.jpg",
+    "images": [
+      "/assets/projects/multi-sensor-1.jpg"
+    ],
+    "demoUrl": null,
+    "githubUrl": null,
+    "achievements": [
+      "Matlab을 활용한 센서 데이터 획득 및 신호 전처리 구현",
+      "피크 검출 및 분류 로직을 통한 동작 방향 인식 기능 개발",
+      "실시간 데이터의 통계적·물리적 특징 기반 움직임 패턴 분석",
+      "다양한 방향·상황에서 안정적인 방향 판별 성공",
+      "데이터 기반 동작 분류와 신호 해석 역량 향상"
+    ]
+  },
+  {
     "id": "autonomous-delivery-robot",
     "title": "자율배송 로봇 시스템",
     "description": "LiDAR와 카메라 센서 융합을 통한 자율주행 배송 로봇 개발입니다. 실시간 경로 계획 및 장애물 회피 기능을 구현했습니다.",
